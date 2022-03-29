@@ -1,3 +1,20 @@
+## Solution with lambda function:
+
+calculator = {"+" : (lambda x, y : x + y),
+              "-" : (lambda x, y : x - y),
+              "*" : (lambda x, y : x * y),
+              "/" : (lambda x, y : x / y)}
+
+x = int(input("pls enter a number : "))
+
+y = int(input("pls enter a number : "))
+
+calculator["/"](x, y)
+
+
+
+
+
 
 ## Solution with def : 
 def calculator(x, y, opr) :
