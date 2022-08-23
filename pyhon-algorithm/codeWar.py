@@ -7,7 +7,7 @@
 
 # func("123456789")
 
-
+#  ! ===============================================
 
 # # ? Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
 
@@ -19,13 +19,67 @@
 # remove_vovels("hello mother fucker")
 
 
-
+#  ! ===============================================
 
 # ? Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
 
-def get_sum(a,b):
-    if a == b:
-        return a
-    x = sum(range(a,b+1)) if a < b else sum(range(b,a+1))
-    return x
-get_sum(19,9)
+# def get_sum(a,b):
+#     if a == b:
+#         return a
+#     x = sum(range(a,b+1)) if a < b else sum(range(b,a+1))
+#     return x
+# get_sum(19,9)
+
+
+#  ! ===============================================
+
+
+# def dublicate(arr) :
+#     empty = []
+#     second = []
+#     for i in arr : 
+#         empty.append(int(i))
+#         arr.remove(int(i))
+#         if (int(i) in arr ) and (int(i) in empty):
+#             second.append(int(i))
+        
+        
+#     return second
+
+# dublicate([1,1,2,2,3,9,9,10,"10"])     
+
+#  ! ===============================================
+
+
+# ? Given a sequence of integers, return the sum of all the integers that have an even index (odd index in COBOL), multiplied by the integer at the last inde
+
+
+def even_last(arr): 
+    total = 0
+    for i in range(len(arr)):
+        if i % 2 == 0:
+            total += arr[i]
+        elif len(arr) == 0:
+            total = 0
+        elif i == 0:
+            total += arr[0]
+            
+    if total > 0:
+        return total * arr[-1]
+    else:
+        return 0
+
+
+#  ? ===============================================
+
+def combine(*args) : 
+    my_new = {}
+    for i in args:
+        for j in i.keys():
+            if j in my_new.keys():
+                my_new[j] += i[j]
+            else :
+                my_new[j] = i[j]
+    return my_new
+
+print(combine({"a": 10,"b": 20, "c": 30} , {"a": 3, "c": 6, "d": 3 , "b": 10}))
